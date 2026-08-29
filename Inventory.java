@@ -4,7 +4,7 @@
 import java.util.Scanner;
 
 public class Inventory{
-
+    //Crates an item class under String so that a String can be entered into the Array
     static class Item{
         String name;
 
@@ -12,9 +12,9 @@ public class Inventory{
             this.name = name;
         }
     }
-
+    //Creates an inventory with five slots to be filled with the input
     static Item[] inventory = new Item[5];
-
+    //This adds an item to the first slot, starting the code
     public static boolean addItem(Item item) {
         for (int i = 0; i < inventory.length; i++) {
             if (inventory[i] == null) {
@@ -24,7 +24,7 @@ public class Inventory{
         }
         return false;
     }
-
+    //Displays the inventory once all inputs are done
     public static void showInventory() {
         for (int i = 0; i < inventory.length; i++) {
             if (inventory[i] != null) {
@@ -34,8 +34,9 @@ public class Inventory{
             }
             }
         }
-            public static void main(String[] args) {
-        
+    
+         public static void main(String[] args) {
+        //input for the user to type in items
         Scanner input = new Scanner(System.in);
 
         for (int i = 0; i < inventory.length; i++) {
@@ -50,7 +51,7 @@ public class Inventory{
                 System.out.println("Your inventory is full");
             }
             }
-
+            //Calls and displays the inventory in the terminal
             System.out.println("\nInventory: ");
             showInventory();
         }
