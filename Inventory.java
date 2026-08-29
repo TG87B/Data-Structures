@@ -34,5 +34,25 @@ public class Inventory{
             }
             }
         }
+            public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+
+        for (int i = 0; i < inventory.length; i++) {
+            System.out.println("Enter your item: ");
+            String name = input.nextLine();
+
+            Item item = new Item(name);
+
+            if(addItem(item)) {
+                System.out.println("The item has been added.");
+            } else {
+                System.out.println("Your inventory is full");
+            }
+            }
+
+            System.out.println("\nInventory: ");
+            showInventory();
+        }
     }
 
